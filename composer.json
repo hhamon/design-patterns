@@ -1,0 +1,10 @@
+{
+    "name": "Demo WebStore",
+    "description": "Sample application to describe design patterns.",
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "sebastian/money": "v1.0.0"
+    }
+}
