@@ -110,4 +110,9 @@ class Product implements ProductInterface
     {
         return $this->volume;
     }
+
+    public function count()
+    {
+        return 1;
+    }
 }
