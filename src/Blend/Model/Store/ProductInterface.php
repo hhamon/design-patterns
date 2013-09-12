@@ -2,7 +2,7 @@
 
 namespace Blend\Model\Store;
 
-interface ProductInterface
+interface ProductInterface extends \Countable
 {
     /**
      * Returns the product's reference.

@@ -44,7 +44,7 @@ class Bundle extends Product
         if ($this->mass) {
             return $this->mass;
         }
-        
+
         return $this->getMassesSum();
     }
 
@@ -97,5 +97,10 @@ class Bundle extends Product
         }
 
         return $volume;
+    }
+
+    public function count()
+    {
+        return count($this->products);
     }
 }
