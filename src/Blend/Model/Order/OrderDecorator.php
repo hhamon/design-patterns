@@ -1,29 +1,53 @@
 <?php
-namespace Blend\Model\Order;
 
-use Blend\Model\Store\ProductInterface;
+namespace Blend\Model\Order;
 
 abstract class OrderDecorator implements OrderInterface
 {
+    /**
+     * The decorated order.
+     *
+     * @var Order
+     */
     protected $order;
 
+    /**
+     * Constructor.
+     *
+     * @param OrderInterface $order The decorated order
+     */
     public function __construct(OrderInterface $order)
     {
         $this->order = $order;
     }
 
+    /**
+     * Returns the number of ordered products.
+     *
+     * @return integer
+     */
     public function count()
     {
         return count($this->order);
     }
 
-    public function setProduct(ProductInterface $p)
+    /**
+     * Returns the list of ordered products.
+     *
+     * @return array
+     */
+    public function getProducts()
     {
-        $this->order->setProduct($p);
+        return $this->order->getProducts();
     }
 
-    public function getProduct()
+    /**
+     * Returns the order's currency.
+     *
+     * @return \SebastianBergmann\Money\Currency
+     */
+    public function getCurrency()
     {
-        return $this->order->getProduct();
+        return $this->order->getCurrency();
     }
 }

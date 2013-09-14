@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "93ede4189ef6b754c4a309f7dfc95e28",
+    "hash": "87187c85ac241c2a56ff1c91db8a18e1",
     "packages": [
         {
             "name": "sebastian/money",
-            "version": "v1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/money.git",
-                "reference": "c07a373d2399f3e686234c4f7f088d635eb9641b"
+                "reference": "6f7b801a5e8972741f021113969a6c9e960519c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/money/zipball/c07a373d2399f3e686234c4f7f088d635eb9641b",
-                "reference": "c07a373d2399f3e686234c4f7f088d635eb9641b",
+                "url": "https://api.github.com/repos/sebastianbergmann/money/zipball/6f7b801a5e8972741f021113969a6c9e960519c2",
+                "reference": "6f7b801a5e8972741f021113969a6c9e960519c2",
                 "shasum": ""
             },
             "require": {
@@ -50,7 +50,7 @@
             "keywords": [
                 "money"
             ],
-            "time": "2013-07-21 15:52:12"
+            "time": "2013-09-14 16:21:28"
         }
     ],
     "packages-dev": [
@@ -60,9 +60,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "sebastian/money": 20
+    },
     "platform": [
 
     ],

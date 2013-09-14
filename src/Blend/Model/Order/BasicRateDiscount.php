@@ -1,7 +1,8 @@
 <?php
+
 namespace Blend\Model\Order;
 
-class BasicDiscount extends OrderDecorator
+class BasicRateDiscount extends OrderDecorator
 {
     const DEFAULT_DISCOUNT_PERCENTAGE = 10;
 
@@ -9,12 +10,16 @@ class BasicDiscount extends OrderDecorator
 
     public function __construct(OrderInterface $order, $discount = self::DEFAULT_DISCOUNT_PERCENTAGE)
     {
-        $this->order    = $order;
+        parent::__construct($order);
+
         $this->discount = $discount;
     }
 
     public function getAmount()
     {
-        return $this->order->getAmount() - $this->order->getAmount() * $this->discount / 100;
+        $amount = $this->order->getAmount();
+        $parts = $amount->allocateByRatios(array(100 - $this->discount, $this->discount));
+
+        return $parts[0];
     }
 }
